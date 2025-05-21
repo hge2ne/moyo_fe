@@ -1,20 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import './App.css';
+import LoginPage from './pages/LoginPage';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
-
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-slate-800 text-white">
-    <h1 className="text-4xl font-bold text-sky-400 mb-4">
-      Vite + React + Tailwind CSS 설정 완료!
-    </h1>
-    <p className="text-lg text-green-400">
-      Tailwind 스타일이 잘 적용됩니다.
-    </p>
-  </div>
-  )
+    <Routes>
+      <Route path="/login" element={<LoginPage />} />
+      {/* 다른 페이지 라우트는 여기에 추가할 수 있습니다.
+          예: <Route path="/" element={<HomePage />} />
+      */}
+    </Routes>
+  );
 }
 
-export default App
+export default App;
